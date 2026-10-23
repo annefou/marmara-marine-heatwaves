@@ -1,13 +1,13 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
-  "name": "{{REPO_NAME}}",
-  "description": "{{REPO_DESCRIPTION}}",
+  "name": "marmara-marine-heatwaves",
+  "description": "Marine heatwaves in the Sea of Marmara, Black Sea and Aegean 1982–2025: replication of Saçu et al. 2025 on HEALPix (healpix-geo, WGS84), Hobday definition checked against the reference package, with Climate DT projections. DRAFT, not reviewed.",
   "version": "0.1.0",
-  "dateCreated": "{{RELEASE_DATE}}",
-  "dateModified": "{{RELEASE_DATE}}",
+  "dateCreated": "2026-10-23",
+  "dateModified": "2026-10-23",
   "license": "https://spdx.org/licenses/MIT",
-  "codeRepository": "https://github.com/{{REPO_ORG}}/{{REPO_NAME}}",
+  "codeRepository": "https://github.com/annefou/marmara-marine-heatwaves",
   "identifier": "{{ZENODO_DOI}}",
   "@id": "{{ZENODO_DOI}}",
   "programmingLanguage": {
@@ -19,12 +19,12 @@
   "author": [
     {
       "@type": "Person",
-      "givenName": "{{AUTHOR_GIVEN}}",
-      "familyName": "{{AUTHOR_FAMILY}}",
-      "@id": "{{AUTHOR_ORCID}}",
+      "givenName": "Anne",
+      "familyName": "Fouilloux",
+      "@id": "https://orcid.org/0000-0002-1784-2920",
       "affiliation": {
         "@type": "Organization",
-        "name": "{{AUTHOR_AFFILIATION}}"
+        "name": "LifeWatch ERIC"
       }
     }
   ],
@@ -37,9 +37,9 @@
   ],
   "referencePublication": {
     "@type": "ScholarlyArticle",
-    "name": "{{PAPER_TITLE}}",
-    "datePublished": "{{PAPER_YEAR}}",
-    "@id": "https://doi.org/{{PAPER_DOI}}"
+    "name": "Sea surface temperature and marine heatwave variability in interconnected basins: The Black-Marmara-Aegean Seas",
+    "datePublished": "2025",
+    "@id": "https://doi.org/10.1016/j.dynatmoce.2025.101555"
   },
   "isPartOf": {
     "@type": "Organization",

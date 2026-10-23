@@ -1,30 +1,70 @@
-# {{REPO_NAME}}
+# marmara-marine-heatwaves
 
-[![CI](https://github.com/{{REPO_ORG}}/{{REPO_NAME}}/actions/workflows/ci.yml/badge.svg)](https://github.com/{{REPO_ORG}}/{{REPO_NAME}}/actions/workflows/ci.yml)
-[![Jupyter Book](https://github.com/{{REPO_ORG}}/{{REPO_NAME}}/actions/workflows/jupyter-book.yml/badge.svg)](https://{{REPO_ORG}}.github.io/{{REPO_NAME}}/)
-[![Docker](https://github.com/{{REPO_ORG}}/{{REPO_NAME}}/actions/workflows/docker.yml/badge.svg)](https://github.com/{{REPO_ORG}}/{{REPO_NAME}}/pkgs/container/{{REPO_NAME}})
+[![CI](https://github.com/annefou/marmara-marine-heatwaves/actions/workflows/ci.yml/badge.svg)](https://github.com/annefou/marmara-marine-heatwaves/actions/workflows/ci.yml)
+[![Jupyter Book](https://github.com/annefou/marmara-marine-heatwaves/actions/workflows/jupyter-book.yml/badge.svg)](https://annefou.github.io/marmara-marine-heatwaves/)
+[![Docker](https://github.com/annefou/marmara-marine-heatwaves/actions/workflows/docker.yml/badge.svg)](https://github.com/annefou/marmara-marine-heatwaves/pkgs/container/marmara-marine-heatwaves)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/{{ZENODO_DOI}}.svg)]({{ZENODO_DOI}})
 [![FAIR4RS](https://img.shields.io/badge/FAIR4RS-conformant-brightgreen)](docs/fair4rs-checklist.md)
 [![FORRT](https://img.shields.io/badge/FORRT-replication-blue)](https://forrt.org/)
 [![Science Live](https://img.shields.io/badge/Science%20Live-nanopub%20chain-purple)](nanopubs/PUBLISHED.md)
 [![RO-Crate](https://img.shields.io/badge/RO--Crate-1.2-orange)](ro-crate-metadata.json)
-[![Software Heritage](https://archive.softwareheritage.org/badge/origin/https://github.com/{{REPO_ORG}}/{{REPO_NAME}}/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/{{REPO_ORG}}/{{REPO_NAME}})
+[![Software Heritage](https://archive.softwareheritage.org/badge/origin/https://github.com/annefou/marmara-marine-heatwaves/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/annefou/marmara-marine-heatwaves)
 
-> **{{PAPER_TITLE}}** — replication study.
-> Reference paper: [{{PAPER_DOI}}](https://doi.org/{{PAPER_DOI}})
+> **Sea surface temperature and marine heatwave variability in interconnected basins: The Black-Marmara-Aegean Seas** — replication study.
+> Reference paper: [10.1016/j.dynatmoce.2025.101555](https://doi.org/10.1016/j.dynatmoce.2025.101555)
 
-This is a self-contained replication of the headline claim of the reference paper. It produces a reproducible computational pipeline, a Zenodo-archived release with a citable DOI, and a FORRT-tagged nanopublication chain on the [Science Live platform](https://platform.sciencelive4all.org).
+**DRAFT, not reviewed.** LifeWatch ERIC feasibility test prepared for the meeting with HUBIOM (Hacettepe University) and Turkish research-infrastructure representatives on 30 October 2026. Our reading of the published work, open to correction by the authors.
+
+### Claims tested (Saçu, Şen, Erdik and Öztürk 2025, *Dynamics of Atmospheres and Oceans* 110:101555)
+
+| Claim | Paper | Ours, same data and baseline (1982-2021) |
+| --- | --- | --- |
+| M1. Sea of Marmara heatwave frequency trend, the highest of the three seas | 1.56 events per decade (cluster MS-C5) | **1.46** (95 % CI 1.09-1.84); Black Sea 1.46, Aegean 1.10 |
+| M1b. Marmara heatwave days and duration trends | 25.55 days, 5.01 days per decade | **25.0** days (11.6-38.3), 3.3 days |
+| M2. SST warming, strongest in the Black Sea then the Marmara | Black Sea up to 0.8, Aegean 0.3 degC per decade (grid points) | Sea means: Black Sea 0.60, Marmara 0.50, Aegean 0.46 degC per decade |
+| M3. Mucilage years 2007-08 and 2020-21 coincide with intense, long heatwaves | Qualitative | 2020 ranks 2nd of 44 years (188 heatwave days), 2021 8th, 2007 11th, 2008 22nd |
+
+### What the extension adds
+
+- **Baseline matters.** The frequency trend is 1.32 events per decade with the WMO 1991-2020 normal and 1.89 with 1982-2011.
+- **Most of the rise is mean warming.** On the detrended series the Marmara trend falls to 0.29 events per decade (CI -0.04 to 0.62) and heatwave days to 2.3 (not significant); Black Sea 0.05. Absolute heat stress (fixed baseline) matters for organisms; extremes beyond the warming trend have barely increased.
+- **Heatwaves alone do not explain mucilage.** 2020 was also the 2nd most extreme year in the Black Sea and 5th in the Aegean, which had no mucilage outbreak; nutrient loads and stratification are the other ingredients.
+- **2024 is the Marmara record**: 231 heatwave days (then 2020: 188, 2023: 145). Trend 1982-2025: 1.45 events and 31.2 days per decade.
+- **Detection checked** against the reference implementation (Oliver, marineHeatWaves, commit d7292bf): 99.98-100 % daily agreement, thresholds within 0.003 degC (`results/reference_check.json`).
+
+Figure: [Marmara annual heatwave days and events](figures/marmara_mhw_annual.png). Tables: `results/`.
+
+### Method
+
+- OSTIA L4 reprocessed SST (Copernicus Marine SST_GLO_SST_L4_REP_OBSERVATIONS_010_011, 0.05 deg, [doi:10.48670/moi-00168](https://doi.org/10.48670/moi-00168)), the paper's product, 1982-2025.
+- Seas: IHO Sea Areas (Marine Regions, CC BY 4.0) instead of the paper's clusters.
+- Daily fields resampled onto HEALPix cells (depth 10, ~6.4 km, [healpix-geo](https://github.com/GRID4EARTH/healpix-geo), WGS84 ellipsoid, NESTED) with [healpix-resample](https://github.com/GRID4EARTH/healpix-resample) (conservative bilinear, land excluded); sea means are plain means over equal-area cells.
+- Hobday et al. 2016 detection (11-day window, 90th percentile, 31-day smoothing, at least 5 days, gaps of up to 2 days joined), OLS trends with HAC (Newey-West) confidence intervals.
+
+### Limits
+
+- Sub-regions are IHO seas, not the paper's clusters (the paper's Marmara cluster MS-C5 is close to the IHO Sea of Marmara).
+- The paper used a MATLAB toolbox (Zhao and Marin 2019); our Python detection agrees with the reference Python implementation, not checked against the MATLAB one.
+- Climate Digital Twin projections (planned) are not yet included.
+- Surface temperature only; mucilage itself is not modelled.
+
+### Data
+
+Copernicus Marine (Copernicus Marine licence; free account), IHO Sea Areas (Marine Regions, CC BY 4.0). Only code, plots and summary statistics are in this repository.
 
 ---
 
 ## Quick start
 
 ```bash
-git clone https://github.com/{{REPO_ORG}}/{{REPO_NAME}}.git
-cd {{REPO_NAME}}
+git clone https://github.com/annefou/marmara-marine-heatwaves.git
+cd marmara-marine-heatwaves
 pixi install
-pixi run snakemake --cores 1
+pixi run download            # needs a free Copernicus Marine account (copernicusmarine login)
+pixi run healpix
+pixi run mhw
+pixi run reference-check
 ```
 
 (Pixi resolves `pixi.toml` against the per-platform `pixi.lock`, installs the env under `.pixi/`, and provides `pixi run` for any task without needing an `activate` step.)
@@ -32,10 +72,10 @@ pixi run snakemake --cores 1
 Or with Docker:
 
 ```bash
-docker run --rm ghcr.io/{{REPO_ORG}}/{{REPO_NAME}}:latest
+docker run --rm ghcr.io/annefou/marmara-marine-heatwaves:latest
 ```
 
-The Jupyter Book version is at <https://{{REPO_ORG}}.github.io/{{REPO_NAME}}/>.
+The Jupyter Book version is at <https://annefou.github.io/marmara-marine-heatwaves/>.
 
 ## Built from a template
 
@@ -117,7 +157,7 @@ For lower-level nanopub work — retraction, superseding, batch publishing — s
 If you use this work, please cite both:
 
 - This software: [`CITATION.cff`](CITATION.cff) → DOI [{{ZENODO_DOI}}]({{ZENODO_DOI}})
-- The original paper: [{{PAPER_DOI}}](https://doi.org/{{PAPER_DOI}})
+- The original paper: [10.1016/j.dynatmoce.2025.101555](https://doi.org/10.1016/j.dynatmoce.2025.101555)
 
 ## Acknowledgements
 

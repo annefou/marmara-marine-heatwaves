@@ -1,0 +1,23 @@
+{
+ "healpix_depth": 10,
+ "seas": {
+  "marmara": {
+   "cells": 290,
+   "first_day": "1982-01-01",
+   "last_day": "2025-12-31",
+   "last_rep_day": "2025-12-31"
+  },
+  "aegean": {
+   "cells": 4680,
+   "first_day": "1982-01-01",
+   "last_day": "2025-12-31",
+   "last_rep_day": "2025-12-31"
+  },
+  "black": {
+   "cells": 10405,
+   "first_day": "1982-01-01",
+   "last_day": "2025-12-31",
+   "last_rep_day": "2025-12-31"
+  }
+ }
+}

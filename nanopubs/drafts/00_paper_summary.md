@@ -2,13 +2,13 @@
 
 > This is a working scratchpad for the paper-analysis phase. The output of this file feeds the Quote / AIDA / Claim drafts. It is not itself a nanopub.
 
-**Reference paper:** {{PAPER_TITLE}}
+**Reference paper:** Sea surface temperature and marine heatwave variability in interconnected basins: The Black-Marmara-Aegean Seas
 
-**DOI:** {{PAPER_DOI}}
+**DOI:** 10.1016/j.dynatmoce.2025.101555
 
 **Authors:** _add._
 
-**Year:** {{PAPER_YEAR}}
+**Year:** 2025
 
 ## Headline claim
 

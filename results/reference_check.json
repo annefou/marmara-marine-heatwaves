@@ -1,0 +1,39 @@
+{
+ "reference": "https://raw.githubusercontent.com/ecjoliver/marineHeatWaves/d7292bf08ade0af213fa760b0d7e4adfe5f52894/marineHeatWaves.py",
+ "marmara": {
+  "period": [
+   "1982-01-01",
+   "2025-12-31"
+  ],
+  "threshold_max_abs_diff_degC": 0.003242403461086951,
+  "events_ours": 95,
+  "events_ref": 95,
+  "mhw_days_ours": 1642,
+  "mhw_days_ref": 1643,
+  "daily_agreement": 0.99994
+ },
+ "black": {
+  "period": [
+   "1982-01-01",
+   "2025-12-31"
+  ],
+  "threshold_max_abs_diff_degC": 0.0027343042435212794,
+  "events_ours": 87,
+  "events_ref": 87,
+  "mhw_days_ours": 1763,
+  "mhw_days_ref": 1763,
+  "daily_agreement": 1.0
+ },
+ "aegean": {
+  "period": [
+   "1982-01-01",
+   "2025-12-31"
+  ],
+  "threshold_max_abs_diff_degC": 0.0032413974885034946,
+  "events_ours": 76,
+  "events_ref": 75,
+  "mhw_days_ours": 1767,
+  "mhw_days_ref": 1770,
+  "daily_agreement": 0.99981
+ }
+}

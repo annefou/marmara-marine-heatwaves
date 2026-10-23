@@ -1,0 +1,209 @@
+{
+ "paper": {
+  "marmara": {
+   "frequency": 1.56,
+   "mhw_days": 25.55,
+   "duration": 5.01
+  },
+  "black": {
+   "frequency": [
+    1.23,
+    1.55
+   ],
+   "mhw_days": [
+    20.89,
+    28.31
+   ],
+   "duration": [
+    2.54,
+    11.28
+   ]
+  },
+  "aegean": {
+   "frequency": [
+    1.06,
+    1.21
+   ],
+   "mhw_days": [
+    23.45,
+    27.62
+   ],
+   "duration": [
+    5.38,
+    17.05
+   ]
+  }
+ },
+ "seas": {
+  "marmara": {
+   "cells": 290,
+   "sst_trend_degC_per_decade": {
+    "1982_2021": 0.503,
+    "2000_2021": 0.553,
+    "1982_2025": 0.508
+   },
+   "mucilage_years_rank_of_44": {
+    "2007": {
+     "mhw_days": 43,
+     "rank_days": 11,
+     "cum_intensity": 94.1,
+     "rank_cum": 11
+    },
+    "2008": {
+     "mhw_days": 12,
+     "rank_days": 22,
+     "cum_intensity": 26.5,
+     "rank_cum": 20
+    },
+    "2020": {
+     "mhw_days": 188,
+     "rank_days": 2,
+     "cum_intensity": 368.0,
+     "rank_cum": 2
+    },
+    "2021": {
+     "mhw_days": 94,
+     "rank_days": 8,
+     "cum_intensity": 189.7,
+     "rank_cum": 8
+    }
+   }
+  },
+  "black": {
+   "cells": 10405,
+   "sst_trend_degC_per_decade": {
+    "1982_2021": 0.598,
+    "2000_2021": 0.56,
+    "1982_2025": 0.593
+   },
+   "mucilage_years_rank_of_44": {
+    "2007": {
+     "mhw_days": 40,
+     "rank_days": 14,
+     "cum_intensity": 98.7,
+     "rank_cum": 13
+    },
+    "2008": {
+     "mhw_days": 7,
+     "rank_days": 24,
+     "cum_intensity": 13.4,
+     "rank_cum": 25
+    },
+    "2020": {
+     "mhw_days": 202,
+     "rank_days": 2,
+     "cum_intensity": 417.5,
+     "rank_cum": 2
+    },
+    "2021": {
+     "mhw_days": 85,
+     "rank_days": 9,
+     "cum_intensity": 160.7,
+     "rank_cum": 9
+    }
+   }
+  },
+  "aegean": {
+   "cells": 4680,
+   "sst_trend_degC_per_decade": {
+    "1982_2021": 0.463,
+    "2000_2021": 0.419,
+    "1982_2025": 0.47
+   },
+   "mucilage_years_rank_of_44": {
+    "2007": {
+     "mhw_days": 30,
+     "rank_days": 13,
+     "cum_intensity": 58.5,
+     "rank_cum": 13
+    },
+    "2008": {
+     "mhw_days": 0,
+     "rank_days": 28,
+     "cum_intensity": 0.0,
+     "rank_cum": 28
+    },
+    "2020": {
+     "mhw_days": 148,
+     "rank_days": 5,
+     "cum_intensity": 204.5,
+     "rank_cum": 6
+    },
+    "2021": {
+     "mhw_days": 124,
+     "rank_days": 7,
+     "cum_intensity": 199.4,
+     "rank_cum": 7
+    }
+   }
+  }
+ },
+ "trends_1982_2021": {
+  "marmara": {
+   "paper": {
+    "frequency": 1.462,
+    "mhw_days": 24.955,
+    "duration": 3.324
+   },
+   "wmo_1991_2020": {
+    "frequency": 1.315,
+    "mhw_days": 22.475,
+    "duration": 5.635
+   },
+   "hobday_1982_2011": {
+    "frequency": 1.886,
+    "mhw_days": 41.268,
+    "duration": 5.298
+   },
+   "detrended": {
+    "frequency": 0.292,
+    "mhw_days": 2.337,
+    "duration": -1.236
+   }
+  },
+  "black": {
+   "paper": {
+    "frequency": 1.456,
+    "mhw_days": 28.931,
+    "duration": 2.393
+   },
+   "wmo_1991_2020": {
+    "frequency": 1.289,
+    "mhw_days": 23.886,
+    "duration": 1.372
+   },
+   "hobday_1982_2011": {
+    "frequency": 1.634,
+    "mhw_days": 46.806,
+    "duration": 7.459
+   },
+   "detrended": {
+    "frequency": 0.054,
+    "mhw_days": -2.174,
+    "duration": -2.03
+   }
+  },
+  "aegean": {
+   "paper": {
+    "frequency": 1.1,
+    "mhw_days": 25.587,
+    "duration": 3.84
+   },
+   "wmo_1991_2020": {
+    "frequency": 1.073,
+    "mhw_days": 23.111,
+    "duration": 4.09
+   },
+   "hobday_1982_2011": {
+    "frequency": 1.591,
+    "mhw_days": 44.35,
+    "duration": 8.579
+   },
+   "detrended": {
+    "frequency": 0.323,
+    "mhw_days": 0.135,
+    "duration": -2.859
+   }
+  }
+ }
+}
