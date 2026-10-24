@@ -78,6 +78,20 @@ docker run --rm ghcr.io/annefou/marmara-marine-heatwaves:latest
 
 The Jupyter Book version is at <https://annefou.github.io/marmara-marine-heatwaves/>.
 
+## How to reproduce
+
+```
+pixi install
+pixi run snakemake --cores 1              # OSTIA heatwaves and the reference check: Copernicus Marine account
+pixi run snakemake --cores 1 climatedt    # Climate DT projection to 2049: DestinE upgraded access
+pixi run snakemake --cores 1 subsurface   # Copernicus Marine Marmara model at 500 m, 2022-2025
+```
+
+Every step is a script in `pipeline/` with its usage in its docstring; `Snakefile` gives the order, inputs and
+outputs. Accounts are read by the Copernicus Marine toolbox and from `~/.polytopeapirc` and never stored here.
+Downloads stay in `work/`; only code, plots and summary results are committed. The country-file charts are in
+`docs/country_file/`.
+
 ## Built from a template
 
 This repository was created from [`sciencelivehub/forrt-replication-template`](https://github.com/sciencelivehub/forrt-replication-template). The template ships an operating manual for AI assistants ([`CLAUDE.md`](CLAUDE.md), [`AGENTS.md`](AGENTS.md)), domain conventions ([`DOMAIN.md`](DOMAIN.md)), and reference docs (`docs/`) so that an AI working only inside this repository can guide a researcher from "paper PDF + GitHub repo" to "published FORRT chain + Zenodo DOI" with no other context.
