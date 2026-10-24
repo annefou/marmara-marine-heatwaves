@@ -67,3 +67,6 @@ claude-resume.txt
 
 # Work files (inputs, rasters, model outputs): never committed
 work/
+
+# paper PDFs stay local (publisher copyright)
+paper/*.pdf

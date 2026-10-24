@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "kind": "forrt-chain-draft",
+  "chain_shape": "paper-rooted",
+  "source": {
+    "repository": "https://github.com/annefou/marmara-marine-heatwaves",
+    "commit": "cecc556fc68fd3c0e9734d243e0c5001d020aaa8",
+    "figure": "figures/doc_marmara_days.png"
+  },
+  "steps": [
+    {
+      "step": "01_quote",
+      "template_key": "ANNOTATE_QUOTATION",
+      "template_uri": "https://w3id.org/np/RA24onqmqTMsraJ7ypYFOuckmNWpo4Zv5gsLqhXt7xYPU",
+      "prefill": {
+        "paper": "10.1016/j.dynatmoce.2025.101555",
+        "quotation": "The highest trend in MHW frequency is observed in the Marmara Sea, with an increase of 1.56 events/decade which further intensified after the 2000s.",
+        "comment": "This is the paper's headline quantitative result for the Sea of Marmara: of three connected seas, the small semi-enclosed basin between the Black Sea and the Aegean shows the fastest rise in marine heatwave frequency. The paper links heatwaves to the mucilage outbreaks of 2007-2008 and 2020-2021, so the size of the trend, and how much of it is the basin's mean warming, matters for managing the basin. The replication tests the size of the trend and its rank among the three seas with the same satellite product and heatwave definition."
+      },
+      "provenance": {
+        "paper": "CITATION.cff",
+        "quotation": "nanopubs/drafts/01_quote.md",
+        "comment": "nanopubs/drafts/01_quote.md"
+      },
+      "published_uri": null
+    },
+    {
+      "step": "02_aida",
+      "template_key": "AIDA_SENTENCE",
+      "template_uri": "https://w3id.org/np/RALmXhDw3rHcMveTgbv8VtWxijUHwnSqhCmtJFIPKWVaA",
+      "prefill": {
+        "aida": "Marine heatwaves have become more frequent in the Sea of Marmara since the early 1980s, faster than in the adjacent Black Sea and Aegean Sea.",
+        "topic": [
+          {
+            "uri": "http://www.wikidata.org/entity/Q56321065",
+            "label": "marine heatwave"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q1507383",
+            "label": "sea surface temperature"
+          }
+        ],
+        "st3": [
+          {
+            "dataset": "https://doi.org/10.48670/moi-00168"
+          }
+        ]
+      },
+      "provenance": {
+        "aida": "nanopubs/drafts/02_aida.md",
+        "topic": "nanopubs/drafts/02_aida.md + Wikidata",
+        "st3": "nanopubs/drafts/02_aida.md"
+      },
+      "published_uri": null
+    },
+    {
+      "step": "03_claim",
+      "template_key": "FORRT_CLAIM",
+      "template_uri": "https://w3id.org/np/RAZWyM8D16ya3S1zhCvrG1f0iSpd9-8onVWp0FTvvX7LQ",
+      "prefill": {
+        "claim": "marmara-mhw-frequency-trend-claim",
+        "label": "Sea of Marmara marine heatwave frequency trend 1982-2021, highest of the Black, Marmara and Aegean Seas (Saçu et al. 2025)",
+        "forrtType": "https://w3id.org/sciencelive/o/terms/descriptive_pattern-FORRT-Claim",
+        "source": "https://doi.org/10.1016/j.dynatmoce.2025.101555"
+      },
+      "provenance": {
+        "claim": "nanopubs/drafts/03_claim.md",
+        "label": "nanopubs/drafts/03_claim.md",
+        "forrtType": "nanopubs/drafts/03_claim.md",
+        "source": "CITATION.cff"
+      },
+      "manual": [
+        "forrtType"
+      ],
+      "published_uri": null
+    },
+    {
+      "step": "04_study",
+      "template_key": "FORRT_REPLICATION",
+      "template_uri": "https://w3id.org/np/RAuLEjPp-4dTvPwMkfHggTto1CgjIftiGRAgHlyeEonjQ",
+      "prefill": {
+        "study": "marmara-mhw-replication-study",
+        "label": "Replication of the Sea of Marmara marine heatwave frequency trend with OSTIA on HEALPix cells, 1982-2025",
+        "type": "https://w3id.org/sciencelive/o/terms/Reproduction-Replication-Study",
+        "scope": "The claim that marine heatwave frequency in the Sea of Marmara rose by about 1.56 events per decade over 1982-2021, the highest trend of the Black, Marmara and Aegean Seas. In scope: the size and significance of the Marmara trend with the paper's data product and heatwave definition, its rank against the Black Sea and the Aegean, and how much of it is the basin's mean warming. Out of scope: the statement that the trend intensified after the 2000s, the correlations with climate indices, and any causal link to mucilage (mucilage years are only ranked by heatwave days).",
+        "methodology": "Daily OSTIA L4 reprocessed sea surface temperature (Copernicus Marine, 0.05 degrees), the paper's product, 1982-2025, resampled onto HEALPix cells of about 6.4 km (depth 10, WGS84 ellipsoid, nested) with conservative bilinear resampling. Each sea is the set of cells whose centre lies in its IHO polygon and which are at least half sea (290 cells for the Sea of Marmara); the sea-mean daily series is analysed. Marine heatwaves follow Hobday et al. (2016): 90th-percentile threshold from an 11-day window smoothed over 31 days, events of at least 5 days, gaps of 2 days or less joined, baseline 1982-2021 as in the paper. Our detection is checked day by day against the marineHeatWaves reference code. Trends of annual event counts and heatwave days are ordinary least squares with Newey-West 95% intervals (2 lags), with Theil-Sen slopes alongside. Variants: WMO baseline 1991-2020, baseline 1982-2011, and detection on the linearly detrended series.",
+        "deviation": "Sub-regions are the IHO seas rather than the paper's k-means clusters: the Sea of Marmara corresponds to the paper's cluster MS-C5, while the paper's Black Sea and Aegean clusters are not reproduced. Temperature is averaged over equal-area HEALPix cells instead of native pixels. Heatwaves are detected with our own implementation of the Hobday definition, verified against the reference code. The record is extended to 2025 and baseline and detrending variants are added.",
+        "keywordSelection": [
+          {
+            "uri": "http://www.wikidata.org/entity/Q56321065",
+            "label": "marine heatwave"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q1507383",
+            "label": "sea surface temperature"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q35367",
+            "label": "Sea of Marmara"
+          }
+        ],
+        "disciplineSelection": {
+          "uri": "http://www.wikidata.org/entity/Q43518",
+          "label": "oceanography"
+        }
+      },
+      "provenance": {
+        "study": "nanopubs/drafts/04_study.md",
+        "label": "nanopubs/drafts/04_study.md",
+        "type": "nanopubs/drafts/04_study.md",
+        "scope": "nanopubs/drafts/04_study.md",
+        "methodology": "nanopubs/drafts/04_study.md",
+        "deviation": "nanopubs/drafts/04_study.md",
+        "keywordSelection": "nanopubs/drafts/04_study.md + Wikidata",
+        "disciplineSelection": "nanopubs/drafts/04_study.md + Wikidata"
+      },
+      "manual": [
+        "type"
+      ],
+      "published_uri": null
+    },
+    {
+      "step": "05_outcome",
+      "template_key": "FORRT_REPLICATION_OUTCOME",
+      "template_uri": "https://w3id.org/np/RA2zljn0Nw9SadppOyxZoh-_Rxosslrq-vYG-p9SttnJE",
+      "prefill": {
+        "outcome": "marmara-mhw-frequency-outcome",
+        "label": "Sea of Marmara heatwave frequency trend reproduced; most of it is the basin's mean warming",
+        "date": "2026-10-23",
+        "validationStatus": "https://w3id.org/sciencelive/o/terms/PartiallySupported",
+        "conclusion": "The paper's Sea of Marmara trend is reproduced: 1.46 heatwave events per decade over 1982-2021 (95% interval 1.09-1.84) against the paper's 1.56, which lies inside the interval, and 25.0 heatwave days per decade against the paper's 25.6. The Marmara trend is the highest of the three seas, but only just ahead of the Black Sea (1.462 against 1.456 events per decade) and clearly above the Aegean (1.10). Once the series is detrended, the Marmara trend falls to 0.29 events per decade and is not significant: the rising frequency is mostly the basin's mean warming rather than more extreme departures from it. The claim is supported for the size of the trend, partially for its rank, and not tested for the intensification after the 2000s.",
+        "evidence": "Sea of Marmara, 290 HEALPix cells, OSTIA 1982-2021, baseline 1982-2021 (as in the paper): event frequency +1.462 per decade (Newey-West 95% interval 1.086-1.839, p < 0.001; Theil-Sen 1.25); heatwave days +24.96 per decade (11.61-38.31, p = 0.0002). Other baselines: WMO 1991-2020 +1.315 (0.931-1.699); 1982-2011 +1.886 (1.465-2.308). Detrended series: +0.292 (-0.039 to 0.622, p = 0.084). Black Sea +1.456 and Aegean +1.100 events per decade with the paper's baseline. Sea surface temperature trend +0.503 degC per decade (1982-2021). Detection check against the marineHeatWaves reference code, 1982-2025: 95 events in both, daily agreement 99.994%, threshold difference at most 0.003 degC. Files: results/mhw_trends.csv, results/claims.json, results/reference_check.json.",
+        "confidenceLevel": "https://w3id.org/sciencelive/o/terms/HighConfidence",
+        "limitations": "The sub-regions are IHO seas, not the paper's clusters, so the Black Sea and Aegean comparison is approximate. One data product only. Event-based trends depend on the baseline (1.32 to 1.89 events per decade across the three tested), which is why the detrended result matters for interpretation. The post-2000 intensification and the climate-index correlations were not tested. Mucilage years are ranked, not modelled: 2020 has the second-highest heatwave days of 44 years and 2021 the eighth, but 2007 ranks eleventh and 2008 twenty-second."
+      },
+      "provenance": {
+        "outcome": "nanopubs/drafts/05_outcome.md",
+        "label": "nanopubs/drafts/05_outcome.md",
+        "date": "CITATION.cff",
+        "validationStatus": "nanopubs/drafts/05_outcome.md",
+        "conclusion": "nanopubs/drafts/05_outcome.md",
+        "evidence": "nanopubs/drafts/05_outcome.md",
+        "confidenceLevel": "nanopubs/drafts/05_outcome.md",
+        "limitations": "nanopubs/drafts/05_outcome.md"
+      },
+      "manual": [
+        "validationStatus",
+        "confidenceLevel"
+      ],
+      "published_uri": null
+    },
+    {
+      "step": "06_citation",
+      "template_key": "CITATION_CITO",
+      "template_uri": "https://w3id.org/np/RA43F9EoOuzF0xoNUnCMNyFsfIqlsuWDdPHCnN0wCdCAw",
+      "prefill": {
+        "st02": [
+          {
+            "cites": "http://purl.org/spar/cito/qualifies",
+            "cited": "https://doi.org/10.1016/j.dynatmoce.2025.101555"
+          },
+          {
+            "cites": "http://purl.org/spar/cito/usesMethodIn",
+            "cited": "https://doi.org/10.1016/j.pocean.2015.12.014"
+          },
+          {
+            "cites": "http://purl.org/spar/cito/citesAsDataSource",
+            "cited": "https://doi.org/10.48670/moi-00168"
+          }
+        ]
+      },
+      "provenance": {
+        "st02": "cites = nanopubs/drafts/06_citation.md; cited = nanopubs/drafts/06_citation.md; further rows = nanopubs/drafts/06_citation.md"
+      },
+      "published_uri": null
+    }
+  ],
+  "carry_forward": [
+    {
+      "from": "01_quote",
+      "into": "02_aida",
+      "field": "project"
+    },
+    {
+      "from": "02_aida",
+      "into": "03_claim",
+      "field": "aida"
+    },
+    {
+      "from": "03_claim",
+      "into": "04_study",
+      "field": "claim"
+    },
+    {
+      "from": "04_study",
+      "into": "05_outcome",
+      "field": "study"
+    },
+    {
+      "from": "05_outcome",
+      "into": "06_citation",
+      "field": "work"
+    }
+  ]
+}

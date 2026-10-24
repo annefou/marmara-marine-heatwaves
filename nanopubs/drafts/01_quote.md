@@ -1,14 +1,5 @@
 # 01 — Quote-with-comment (paper-rooted chains)
 
-> Run the pre-flight checklist in `docs/forrt-form-fields.md` § Pre-flight checklist before drafting.
->
-> If this is a question-rooted chain, use `01_pico.md` or `01_pcc.md` instead — see `docs/chain-decision-tree.md`.
->
-> **After choosing the chain shape, delete the two step-1 alternates you aren't using.** Once you've decided this chain is paper-rooted and keep `01_quote.md`, run:
-> ```bash
-> rm nanopubs/drafts/01_pico.md nanopubs/drafts/01_pcc.md
-> ```
-
 **Form heading:** *"Annotate a paper quotation — Annotating a paper quotation with personal interpretation"*
 
 ## Field-by-field draft
@@ -16,7 +7,7 @@
 <!-- field: paper -->
 ### Cited DOI (text input, required)
 
-Format: starts with `10.` — bare DOI, **NOT** `https://doi.org/...` form.
+Resolved with `resolve_doi` (2026-10-24): Saçu, Şen, Erdik, Öztürk 2025, *Dynamics of Atmospheres and Oceans*.
 
 ```
 10.1016/j.dynatmoce.2025.101555
@@ -30,22 +21,18 @@ Format: starts with `10.` — bare DOI, **NOT** `https://doi.org/...` form.
 <!-- field: quotation -->
 ### The exact quotation from the paper (max. 500 characters) (textarea, required)
 
-Verbatim from the paper PDF in `paper/`. Character-for-character. ≤ 500 chars in whole-text mode.
-
-> _Read the PDF first. Don't paraphrase from memory. See `docs/verify-before-drafting.md`._
+Verified with `verify_quote` on `paper/sacu2025.pdf`: page 1 (abstract). The PDF breaks the line after "events/"; the words are the paper's.
 
 ```
-
+The highest trend in MHW frequency is observed in the Marmara Sea, with an increase of 1.56 events/decade which further intensified after the 2000s.
 ```
 
-Character count: ___ / 500.
+Character count: 148 / 500.
 
 <!-- field: quotation-end -->
 ### End of quotation (optional - use when quoting beginning and end of a longer passage, max. 500 characters) (textarea, optional)
 
-Only when quoting the beginning *and* end of a longer passage — set the mode above to
-**Quote start/end**, put the opening phrase under the previous heading and the closing
-phrase here. Leave empty for a single short quote.
+*(skip — single short quote)*
 
 ```
 
@@ -54,10 +41,8 @@ phrase here. Leave empty for a single short quote.
 <!-- field: comment -->
 ### Our interpretation and explanation of why this quotation is relevant (max. 800 characters) (textarea, required)
 
-Why this quote matters and what the replication tests. Connect the paper's claim to the work this repo does. Don't repeat the quote.
-
 ```
-
+This is the paper's headline quantitative result for the Sea of Marmara: of three connected seas, the small semi-enclosed basin between the Black Sea and the Aegean shows the fastest rise in marine heatwave frequency. The paper links heatwaves to the mucilage outbreaks of 2007-2008 and 2020-2021, so the size of the trend, and how much of it is the basin's mean warming, matters for managing the basin. The replication tests the size of the trend and its rank among the three seas with the same satellite product and heatwave definition.
 ```
 
 ## Publication note
