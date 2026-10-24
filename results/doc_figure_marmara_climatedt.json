@@ -1,0 +1,767 @@
+[
+ {
+  "source": "OSTIA",
+  "year": 1991,
+  "days": 0
+ },
+ {
+  "source": "OSTIA",
+  "year": 1992,
+  "days": 0
+ },
+ {
+  "source": "OSTIA",
+  "year": 1993,
+  "days": 0
+ },
+ {
+  "source": "OSTIA",
+  "year": 1994,
+  "days": 34
+ },
+ {
+  "source": "OSTIA",
+  "year": 1995,
+  "days": 0
+ },
+ {
+  "source": "OSTIA",
+  "year": 1996,
+  "days": 0
+ },
+ {
+  "source": "OSTIA",
+  "year": 1997,
+  "days": 0
+ },
+ {
+  "source": "OSTIA",
+  "year": 1998,
+  "days": 0
+ },
+ {
+  "source": "OSTIA",
+  "year": 1999,
+  "days": 6
+ },
+ {
+  "source": "OSTIA",
+  "year": 2000,
+  "days": 0
+ },
+ {
+  "source": "OSTIA",
+  "year": 2001,
+  "days": 15
+ },
+ {
+  "source": "OSTIA",
+  "year": 2002,
+  "days": 24
+ },
+ {
+  "source": "OSTIA",
+  "year": 2003,
+  "days": 0
+ },
+ {
+  "source": "OSTIA",
+  "year": 2004,
+  "days": 0
+ },
+ {
+  "source": "OSTIA",
+  "year": 2005,
+  "days": 0
+ },
+ {
+  "source": "OSTIA",
+  "year": 2006,
+  "days": 6
+ },
+ {
+  "source": "OSTIA",
+  "year": 2007,
+  "days": 33
+ },
+ {
+  "source": "OSTIA",
+  "year": 2008,
+  "days": 10
+ },
+ {
+  "source": "OSTIA",
+  "year": 2009,
+  "days": 19
+ },
+ {
+  "source": "OSTIA",
+  "year": 2010,
+  "days": 86
+ },
+ {
+  "source": "OSTIA",
+  "year": 2011,
+  "days": 15
+ },
+ {
+  "source": "OSTIA",
+  "year": 2012,
+  "days": 81
+ },
+ {
+  "source": "OSTIA",
+  "year": 2013,
+  "days": 0
+ },
+ {
+  "source": "OSTIA",
+  "year": 2014,
+  "days": 34
+ },
+ {
+  "source": "OSTIA",
+  "year": 2015,
+  "days": 14
+ },
+ {
+  "source": "OSTIA",
+  "year": 2016,
+  "days": 73
+ },
+ {
+  "source": "OSTIA",
+  "year": 2017,
+  "days": 20
+ },
+ {
+  "source": "OSTIA",
+  "year": 2018,
+  "days": 77
+ },
+ {
+  "source": "OSTIA",
+  "year": 2019,
+  "days": 114
+ },
+ {
+  "source": "OSTIA",
+  "year": 2020,
+  "days": 165
+ },
+ {
+  "source": "OSTIA",
+  "year": 2021,
+  "days": 90
+ },
+ {
+  "source": "OSTIA",
+  "year": 2022,
+  "days": 38
+ },
+ {
+  "source": "OSTIA",
+  "year": 2023,
+  "days": 140
+ },
+ {
+  "source": "OSTIA",
+  "year": 2024,
+  "days": 221
+ },
+ {
+  "source": "OSTIA",
+  "year": 2025,
+  "days": 117
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 1991,
+  "days": 78
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 1992,
+  "days": 11
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 1993,
+  "days": 14
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 1994,
+  "days": 17
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 1995,
+  "days": 5
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 1996,
+  "days": 48
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 1997,
+  "days": 17
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 1998,
+  "days": 9
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 1999,
+  "days": 6
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2000,
+  "days": 33
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2001,
+  "days": 43
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2002,
+  "days": 17
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2003,
+  "days": 60
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2004,
+  "days": 26
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2005,
+  "days": 28
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2006,
+  "days": 28
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2007,
+  "days": 22
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2008,
+  "days": 41
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2009,
+  "days": 0
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2010,
+  "days": 0
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2011,
+  "days": 8
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2012,
+  "days": 50
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2013,
+  "days": 27
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2014,
+  "days": 39
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2015,
+  "days": 0
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2016,
+  "days": 16
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2017,
+  "days": 106
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2018,
+  "days": 36
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2019,
+  "days": 26
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2020,
+  "days": 61
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2021,
+  "days": 33
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2022,
+  "days": 35
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2023,
+  "days": 31
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2024,
+  "days": 31
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2025,
+  "days": 34
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2026,
+  "days": 28
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2027,
+  "days": 39
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2028,
+  "days": 77
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2029,
+  "days": 140
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2030,
+  "days": 105
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2031,
+  "days": 24
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2032,
+  "days": 31
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2033,
+  "days": 113
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2034,
+  "days": 197
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2035,
+  "days": 97
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2036,
+  "days": 170
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2037,
+  "days": 147
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2038,
+  "days": 117
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2039,
+  "days": 32
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2040,
+  "days": 89
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2041,
+  "days": 115
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2042,
+  "days": 97
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2043,
+  "days": 83
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2044,
+  "days": 163
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2045,
+  "days": 192
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2046,
+  "days": 246
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2047,
+  "days": 226
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2048,
+  "days": 339
+ },
+ {
+  "source": "IFS-FESOM",
+  "year": 2049,
+  "days": 282
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 1991,
+  "days": 0
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 1992,
+  "days": 0
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 1993,
+  "days": 0
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 1994,
+  "days": 6
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 1995,
+  "days": 0
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 1996,
+  "days": 0
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 1997,
+  "days": 19
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 1998,
+  "days": 144
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 1999,
+  "days": 0
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2000,
+  "days": 10
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2001,
+  "days": 7
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2002,
+  "days": 31
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2003,
+  "days": 5
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2004,
+  "days": 0
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2005,
+  "days": 13
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2006,
+  "days": 42
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2007,
+  "days": 0
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2008,
+  "days": 5
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2009,
+  "days": 36
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2010,
+  "days": 0
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2011,
+  "days": 77
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2012,
+  "days": 93
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2013,
+  "days": 138
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2014,
+  "days": 50
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2015,
+  "days": 4
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2016,
+  "days": 0
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2017,
+  "days": 21
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2018,
+  "days": 26
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2019,
+  "days": 17
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2020,
+  "days": 69
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2021,
+  "days": 10
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2022,
+  "days": 33
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2023,
+  "days": 45
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2024,
+  "days": 124
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2025,
+  "days": 81
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2026,
+  "days": 78
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2027,
+  "days": 12
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2028,
+  "days": 75
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2029,
+  "days": 111
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2030,
+  "days": 5
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2031,
+  "days": 5
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2032,
+  "days": 85
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2033,
+  "days": 141
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2034,
+  "days": 108
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2035,
+  "days": 62
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2036,
+  "days": 17
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2037,
+  "days": 90
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2038,
+  "days": 62
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2039,
+  "days": 190
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2040,
+  "days": 69
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2041,
+  "days": 71
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2042,
+  "days": 76
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2043,
+  "days": 53
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2044,
+  "days": 45
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2045,
+  "days": 111
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2046,
+  "days": 187
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2047,
+  "days": 82
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2048,
+  "days": 66
+ },
+ {
+  "source": "IFS-NEMO",
+  "year": 2049,
+  "days": 144
+ }
+]

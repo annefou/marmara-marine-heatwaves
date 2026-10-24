@@ -515,6 +515,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/zarr-3.4.1-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/zict-3.0.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-4.1.0-pyhcf101f3_0.conda
+      - pypi: git+https://github.com/annefou/healpix-connector?tag=v0.2.0#6cf11c71114a28ff7ac41e6ea36bbe9fcdb71b9a
       - pypi: https://files.pythonhosted.org/packages/3d/87/e62f55c956b583380e7d2a71705dfd431ee32dd1689d50491ba0c610fc11/affine-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/4f/37/fa94ddf19800e171c9a23013eeba0013e25308566b1a9e1889890f8ed789/healpix_resample-2026.10.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6e/fb/79b8f748ceb9401843057469f2ffbc39c16045910aa885dd62451e76f1f6/polytope_client-0.7.10-py3-none-any.whl
@@ -949,6 +950,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zlib-1.3.2-h8088a28_2.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zlib-ng-2.3.3-hed4e4f5_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
+      - pypi: git+https://github.com/annefou/healpix-connector?tag=v0.2.0#6cf11c71114a28ff7ac41e6ea36bbe9fcdb71b9a
       - pypi: https://files.pythonhosted.org/packages/3d/87/e62f55c956b583380e7d2a71705dfd431ee32dd1689d50491ba0c610fc11/affine-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/4f/37/fa94ddf19800e171c9a23013eeba0013e25308566b1a9e1889890f8ed789/healpix_resample-2026.10.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6e/fb/79b8f748ceb9401843057469f2ffbc39c16045910aa885dd62451e76f1f6/polytope_client-0.7.10-py3-none-any.whl
@@ -1393,6 +1395,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/zlib-1.3.2-hfd05255_2.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/zlib-ng-2.3.3-h0261ad2_1.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
+      - pypi: git+https://github.com/annefou/healpix-connector?tag=v0.2.0#6cf11c71114a28ff7ac41e6ea36bbe9fcdb71b9a
       - pypi: https://files.pythonhosted.org/packages/2e/06/e92639aed965e7bec43518208e3caccd65d3e3f9f7ae36abd18db15b5fc8/cartopy-0.26.0-cp312-cp312-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/3d/87/e62f55c956b583380e7d2a71705dfd431ee32dd1689d50491ba0c610fc11/affine-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/4f/37/fa94ddf19800e171c9a23013eeba0013e25308566b1a9e1889890f8ed789/healpix_resample-2026.10.2-py3-none-any.whl
@@ -1902,6 +1905,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/zarr-3.4.1-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/zict-3.0.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-4.1.0-pyhcf101f3_0.conda
+      - pypi: git+https://github.com/annefou/healpix-connector?tag=v0.2.0#6cf11c71114a28ff7ac41e6ea36bbe9fcdb71b9a
       - pypi: https://files.pythonhosted.org/packages/3d/87/e62f55c956b583380e7d2a71705dfd431ee32dd1689d50491ba0c610fc11/affine-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/4f/37/fa94ddf19800e171c9a23013eeba0013e25308566b1a9e1889890f8ed789/healpix_resample-2026.10.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6e/fb/79b8f748ceb9401843057469f2ffbc39c16045910aa885dd62451e76f1f6/polytope_client-0.7.10-py3-none-any.whl
@@ -2338,6 +2342,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zlib-1.3.2-h8088a28_2.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zlib-ng-2.3.3-hed4e4f5_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
+      - pypi: git+https://github.com/annefou/healpix-connector?tag=v0.2.0#6cf11c71114a28ff7ac41e6ea36bbe9fcdb71b9a
       - pypi: https://files.pythonhosted.org/packages/3d/87/e62f55c956b583380e7d2a71705dfd431ee32dd1689d50491ba0c610fc11/affine-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/4f/37/fa94ddf19800e171c9a23013eeba0013e25308566b1a9e1889890f8ed789/healpix_resample-2026.10.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6e/fb/79b8f748ceb9401843057469f2ffbc39c16045910aa885dd62451e76f1f6/polytope_client-0.7.10-py3-none-any.whl
@@ -2784,6 +2789,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/zlib-1.3.2-hfd05255_2.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/zlib-ng-2.3.3-h0261ad2_1.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
+      - pypi: git+https://github.com/annefou/healpix-connector?tag=v0.2.0#6cf11c71114a28ff7ac41e6ea36bbe9fcdb71b9a
       - pypi: https://files.pythonhosted.org/packages/2e/06/e92639aed965e7bec43518208e3caccd65d3e3f9f7ae36abd18db15b5fc8/cartopy-0.26.0-cp312-cp312-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/3d/87/e62f55c956b583380e7d2a71705dfd431ee32dd1689d50491ba0c610fc11/affine-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/4f/37/fa94ddf19800e171c9a23013eeba0013e25308566b1a9e1889890f8ed789/healpix_resample-2026.10.2-py3-none-any.whl
@@ -3299,6 +3305,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/zarr-3.4.1-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/zict-3.0.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-4.1.0-pyhcf101f3_0.conda
+      - pypi: git+https://github.com/annefou/healpix-connector?tag=v0.2.0#6cf11c71114a28ff7ac41e6ea36bbe9fcdb71b9a
       - pypi: https://files.pythonhosted.org/packages/3d/87/e62f55c956b583380e7d2a71705dfd431ee32dd1689d50491ba0c610fc11/affine-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/4f/37/fa94ddf19800e171c9a23013eeba0013e25308566b1a9e1889890f8ed789/healpix_resample-2026.10.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6e/fb/79b8f748ceb9401843057469f2ffbc39c16045910aa885dd62451e76f1f6/polytope_client-0.7.10-py3-none-any.whl
@@ -3741,6 +3748,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zlib-1.3.2-h8088a28_2.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zlib-ng-2.3.3-hed4e4f5_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
+      - pypi: git+https://github.com/annefou/healpix-connector?tag=v0.2.0#6cf11c71114a28ff7ac41e6ea36bbe9fcdb71b9a
       - pypi: https://files.pythonhosted.org/packages/3d/87/e62f55c956b583380e7d2a71705dfd431ee32dd1689d50491ba0c610fc11/affine-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/4f/37/fa94ddf19800e171c9a23013eeba0013e25308566b1a9e1889890f8ed789/healpix_resample-2026.10.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6e/fb/79b8f748ceb9401843057469f2ffbc39c16045910aa885dd62451e76f1f6/polytope_client-0.7.10-py3-none-any.whl
@@ -4192,6 +4200,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/zlib-1.3.2-hfd05255_2.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/zlib-ng-2.3.3-h0261ad2_1.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
+      - pypi: git+https://github.com/annefou/healpix-connector?tag=v0.2.0#6cf11c71114a28ff7ac41e6ea36bbe9fcdb71b9a
       - pypi: https://files.pythonhosted.org/packages/2e/06/e92639aed965e7bec43518208e3caccd65d3e3f9f7ae36abd18db15b5fc8/cartopy-0.26.0-cp312-cp312-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/3d/87/e62f55c956b583380e7d2a71705dfd431ee32dd1689d50491ba0c610fc11/affine-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/4f/37/fa94ddf19800e171c9a23013eeba0013e25308566b1a9e1889890f8ed789/healpix_resample-2026.10.2-py3-none-any.whl
@@ -18851,6 +18860,21 @@ packages:
   purls: []
   size: 388453
   timestamp: 1764777142545
+- pypi: git+https://github.com/annefou/healpix-connector?tag=v0.2.0#6cf11c71114a28ff7ac41e6ea36bbe9fcdb71b9a
+  name: healpix-connector
+  version: 0.2.0
+  requires_dist:
+  - healpix-geo>=0.4.1
+  - numpy>=1.26
+  - requests>=2.31 ; extra == 'biodiversity'
+  - pandas>=2.1 ; extra == 'biodiversity'
+  - healpix-resample>=2026.7.0 ; extra == 'convert'
+  - rioxarray>=0.15 ; extra == 'convert'
+  - xarray>=2024.1 ; extra == 'convert'
+  - zarr>=2.17 ; extra == 'convert'
+  - mcp>=1.2 ; extra == 'mcp'
+  - pytest>=8 ; extra == 'test'
+  requires_python: '>=3.11'
 - pypi: https://files.pythonhosted.org/packages/2e/06/e92639aed965e7bec43518208e3caccd65d3e3f9f7ae36abd18db15b5fc8/cartopy-0.26.0-cp312-cp312-win_amd64.whl
   name: cartopy
   version: 0.26.0

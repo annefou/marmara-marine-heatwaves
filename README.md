@@ -46,7 +46,7 @@ Figure: [Marmara annual heatwave days and events](figures/marmara_mhw_annual.png
 
 - Sub-regions are IHO seas, not the paper's clusters (the paper's Marmara cluster MS-C5 is close to the IHO Sea of Marmara).
 - The paper used a MATLAB toolbox (Zhao and Marin 2019); our Python detection agrees with the reference Python implementation, not checked against the MATLAB one.
-- Climate Digital Twin projections (planned) are not yet included.
+- Climate Digital Twin projections: daily SST of Climate DT generation 2 (IFS-FESOM and IFS-NEMO, historical 1990-2014 + SSP3-7.0 2015-2049), region cut out by Polytope and put on the same WGS84 cells with healpix-connector (`pipeline/03_climatedt.py`); evaluation against OSTIA and heatwave days to 2049 against each source's own 1991-2020 climatology (`pipeline/04_climatedt_mhw.py`, `results/climatedt_claims.json`). One realisation per model, one scenario; both models warm more slowly than observed over 1991-2025. Only derived statistics are committed (DestinE terms).
 - Surface temperature only; mucilage itself is not modelled.
 
 ### Data

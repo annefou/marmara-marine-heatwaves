@@ -51,6 +51,7 @@ python-eccodes = "*"
 [pypi-dependencies]
 healpix-resample = "*"       # GRID4EARTH resamplers (conservative bilinear onto HEALPix)
 polytope-client = "*"        # Destination Earth Climate DT (DestinE upgraded access)
+healpix-connector = { git = "https://github.com/annefou/healpix-connector", tag = "v0.2.0" }   # sphere -> WGS84 resampling (LifeWatch ERIC, GRID4EARTH)
 
 [feature.docs.dependencies]
 mystmd = "*"
