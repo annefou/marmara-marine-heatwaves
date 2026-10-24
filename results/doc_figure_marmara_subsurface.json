@@ -1,0 +1,72 @@
+[
+ {
+  "depth": 1,
+  "kind": "heatwave",
+  "anom": 1.47
+ },
+ {
+  "depth": 1,
+  "kind": "other",
+  "anom": -0.4
+ },
+ {
+  "depth": 5,
+  "kind": "heatwave",
+  "anom": 1.29
+ },
+ {
+  "depth": 5,
+  "kind": "other",
+  "anom": -0.35
+ },
+ {
+  "depth": 10,
+  "kind": "heatwave",
+  "anom": 1.11
+ },
+ {
+  "depth": 10,
+  "kind": "other",
+  "anom": -0.29
+ },
+ {
+  "depth": 15,
+  "kind": "heatwave",
+  "anom": 0.32
+ },
+ {
+  "depth": 15,
+  "kind": "other",
+  "anom": -0.05
+ },
+ {
+  "depth": 20,
+  "kind": "heatwave",
+  "anom": 0.09
+ },
+ {
+  "depth": 20,
+  "kind": "other",
+  "anom": -0.03
+ },
+ {
+  "depth": 25,
+  "kind": "heatwave",
+  "anom": 0.13
+ },
+ {
+  "depth": 25,
+  "kind": "other",
+  "anom": -0.04
+ },
+ {
+  "depth": 30,
+  "kind": "heatwave",
+  "anom": 0.07
+ },
+ {
+  "depth": 30,
+  "kind": "other",
+  "anom": -0.02
+ }
+]
