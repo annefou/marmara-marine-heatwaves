@@ -37,6 +37,12 @@ def main():
         nrt = xr.open_dataset(f"{ROOT}/sst/{box}_nrt.nc")["analysed_sst"]
         last_rep = pd.Timestamp(rep.time.values[-1])
         nrt = nrt.sel(time=nrt.time > np.datetime64(last_rep))
+        # The resampling operator is built on the reprocessed grid; near-real-time days go through it only if they
+        # share that exact 0.05 deg grid (same longitudes and latitudes), otherwise they would be silently shifted.
+        if nrt.sizes["time"] and not (np.array_equal(nrt.longitude.values, rep.longitude.values)
+                                      and np.array_equal(nrt.latitude.values, rep.latitude.values)):
+            raise RuntimeError(f"{box}: OSTIA near-real-time grid differs from the reprocessed grid; "
+                               "resample it with its own operator")
         lon2, lat2 = np.meshgrid(rep.longitude.values, rep.latitude.values)
         lon, lat = lon2.ravel(), lat2.ravel()
         op = BilinearResampler(lon_deg=lon, lat_deg=lat, level=DEPTH, nest=True, ellipsoid="WGS84",

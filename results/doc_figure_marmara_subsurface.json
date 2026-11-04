@@ -2,7 +2,7 @@
  {
   "depth": 1,
   "kind": "heatwave",
-  "anom": 1.47
+  "anom": 1.45
  },
  {
   "depth": 1,
@@ -12,17 +12,17 @@
  {
   "depth": 5,
   "kind": "heatwave",
-  "anom": 1.29
+  "anom": 1.26
  },
  {
   "depth": 5,
   "kind": "other",
-  "anom": -0.35
+  "anom": -0.34
  },
  {
   "depth": 10,
   "kind": "heatwave",
-  "anom": 1.11
+  "anom": 1.1
  },
  {
   "depth": 10,
@@ -32,7 +32,7 @@
  {
   "depth": 15,
   "kind": "heatwave",
-  "anom": 0.32
+  "anom": 0.31
  },
  {
   "depth": 15,
@@ -42,17 +42,17 @@
  {
   "depth": 20,
   "kind": "heatwave",
-  "anom": 0.09
+  "anom": 0.07
  },
  {
   "depth": 20,
   "kind": "other",
-  "anom": -0.03
+  "anom": -0.02
  },
  {
   "depth": 25,
   "kind": "heatwave",
-  "anom": 0.13
+  "anom": 0.12
  },
  {
   "depth": 25,
@@ -62,7 +62,7 @@
  {
   "depth": 30,
   "kind": "heatwave",
-  "anom": 0.07
+  "anom": 0.06
  },
  {
   "depth": 30,

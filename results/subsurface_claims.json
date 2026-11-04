@@ -3,56 +3,60 @@
   "2022-01-01",
   "2025-12-31"
  ],
- "columns_median": 741,
+ "grid": "290 OSTIA cells (HEALPix depth 10, WGS84, NESTED), healpix-connector BilinearConservative",
+ "cells_profile_water_at_30m": 240,
+ "cells_1m": 280,
+ "cells_total": 290,
  "model_1m_vs_ostia": {
   "bias_degC": -0.2,
-  "rmse_degC": 0.85,
-  "r": 0.996
+  "rmse_degC": 0.88,
+  "r": 0.996,
+  "note": "model 1 m and OSTIA averaged over the same cells"
  },
  "heatwave_days_may_oct": 171,
  "other_days_may_oct": 565,
  "anomaly_by_depth_degC": {
   "1 m": {
-   "heatwave": 1.47,
+   "heatwave": 1.45,
    "other": -0.4
   },
   "5 m": {
-   "heatwave": 1.29,
-   "other": -0.35
+   "heatwave": 1.26,
+   "other": -0.34
   },
   "10 m": {
-   "heatwave": 1.11,
+   "heatwave": 1.1,
    "other": -0.29
   },
   "15 m": {
-   "heatwave": 0.32,
+   "heatwave": 0.31,
    "other": -0.05
   },
   "20 m": {
-   "heatwave": 0.09,
-   "other": -0.03
+   "heatwave": 0.07,
+   "other": -0.02
   },
   "25 m": {
-   "heatwave": 0.13,
+   "heatwave": 0.12,
    "other": -0.04
   },
   "30 m": {
-   "heatwave": 0.07,
+   "heatwave": 0.06,
    "other": -0.02
   }
  },
  "stratification_degC_may_oct": {
   "1-10 m": {
-   "heatwave": 2.98,
-   "other": 2.79
+   "heatwave": 2.96,
+   "other": 2.78
   },
   "1-30 m": {
-   "heatwave": 9.9,
-   "other": 6.09
+   "heatwave": 9.97,
+   "other": 6.15
   }
  },
  "stratification_anomaly_1_30m_degC_may_oct": {
-  "heatwave": 1.4,
+  "heatwave": 1.39,
   "other": -0.38,
   "note": "1 m minus 30 m, minus its own 2022-2025 seasonal cycle"
  },
