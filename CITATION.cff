@@ -3,10 +3,10 @@ title: "marmara-marine-heatwaves"
 message: "If you use this software, please cite it as below."
 type: software
 authors:
-  - family-names: "Fouilloux"
-    given-names: "Anne"
-    orcid: "https://orcid.org/0000-0002-1784-2920"
-    affiliation: "LifeWatch ERIC"
+- family-names: "Fouilloux"
+  given-names: "Anne"
+  orcid: "https://orcid.org/0000-0002-1784-2920"
+  affiliation: "LifeWatch ERIC"
 repository-code: "https://github.com/annefou/marmara-marine-heatwaves"
 license: MIT
 version: "0.1.0"
@@ -23,31 +23,34 @@ date-released: "2026-11-04"
 # named was gone and "edit by hand" was the only path left. Two repos built from
 # this template then recorded the version DOI two different ways — one a
 # structured identifier, one a prose comment. Hence the automation.)
-doi: "{{ZENODO_DOI}}"
+doi: "10.5281/zenodo.23942471"
 identifiers:
-  - type: doi
-    value: "{{ZENODO_DOI}}"
-    description: "Concept DOI (resolves to the latest version) — cite the project"
-  # On release, the workflow adds:
-  #   - type: doi   value: <version DOI>  "Version DOI for vX.Y.Z — pins this exact release; cite this from nanopubs"
-  #   - type: swh   value: swh:1:rev:<commit>;origin=<repo>  "Software Heritage ID of the vX.Y.Z source tree"
+- type: doi
+  value: 10.5281/zenodo.23942471
+  description: Concept DOI (resolves to the latest version) — cite the project
+- type: doi
+  value: 10.5281/zenodo.23942472
+  description: Version DOI for v0.1.0 — pins this exact release; cite this from nanopubs
+- type: swh
+  value: swh:1:rev:3b87503cb550131e03d9515377d0059af25e0a42;origin=https://github.com/annefou/marmara-marine-heatwaves
+  description: Software Heritage ID of the v0.1.0 source tree
 keywords:
-  - replication
-  - reproducibility
-  - FORRT
-  - nanopublication
-  - Science-Live
+- replication
+- reproducibility
+- FORRT
+- nanopublication
+- Science-Live
 references:
-  - type: article
-    title: "Sea surface temperature and marine heatwave variability in interconnected basins: The Black-Marmara-Aegean Seas"
-    authors:
-      - family-names: "Saçu"
-        given-names: "Şehriban"
-      - family-names: "Şen"
-        given-names: "Olgay"
-      - family-names: "Erdik"
-        given-names: "Tarkan"
-      - family-names: "Öztürk"
-        given-names: "İzzet"
-    year: "2025"
-    doi: "10.1016/j.dynatmoce.2025.101555"
+- type: article
+  title: "Sea surface temperature and marine heatwave variability in interconnected basins: The Black-Marmara-Aegean Seas"
+  authors:
+  - family-names: "Saçu"
+    given-names: "Şehriban"
+  - family-names: "Şen"
+    given-names: "Olgay"
+  - family-names: "Erdik"
+    given-names: "Tarkan"
+  - family-names: "Öztürk"
+    given-names: "İzzet"
+  year: "2025"
+  doi: "10.1016/j.dynatmoce.2025.101555"
