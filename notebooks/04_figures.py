@@ -16,48 +16,24 @@
 # %% [markdown]
 # # 04 — Figures
 #
-# This notebook produces the figures used in the Jupyter Book. Each figure is
-# saved to `figures/` as a high-DPI PNG **and** displayed inline (so MyST
-# renders the figure inside the Jupyter Book — see
-# `docs/cicd-conventions.md`).
+# Written by `pipeline/02_mhw.py`, `pipeline/04_climatedt_mhw.py`, `pipeline/05_subsurface.py` and
+# `pipeline/99_doc_figures.py`, and committed in `figures/`.
 #
-# **Inline display rule:** always pair `fig.savefig(...)` with `plt.show()`.
-# Without `plt.show()`, MyST builds an empty cell. Don't use
-# `matplotlib.use('Agg')` — it blocks inline display.
+# ## Sea of Marmara: annual heatwave days and events
+# ![Marmara annual heatwaves](../figures/marmara_mhw_annual.png)
 #
-# **Layout check:** call `assert_layout(fig)` (`scripts/figcheck.py`) before
-# `fig.savefig(...)`. It fails the notebook — and so the pipeline — when two text
-# labels overlap or nearly touch, or when a legend covers data. For labels at the
-# end of lines, `spread_labels(ax, [(x, y, text), ...])` keeps them apart; call it
-# after `fig.tight_layout()`.
-
-# %%
-import sys
-from pathlib import Path
-
-import matplotlib.pyplot as plt
-import pandas as pd
-
-sys.path.insert(0, str(Path("../scripts").resolve()))
-from figcheck import assert_layout  # noqa: E402
-
-# %%
-RESULTS_DIR = Path("../results")
-FIGURES_DIR = Path("../figures")
-FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+# ## Heatwave days, fixed and detrended baselines
+# ![Marmara heatwave days](../figures/doc_marmara_days.png)
+#
+# ## OSTIA against Climate DT (IFS-FESOM, IFS-NEMO)
+# ![Climate DT heatwaves](../figures/marmara_climatedt_mhw.png)
+#
+# ## Below the surface on heatwave days
+# ![Sub-surface profile](../figures/marmara_subsurface.png)
 
 # %% [markdown]
-# ## Main result figure
-
-# %%
-# summary = pd.read_csv(RESULTS_DIR / "summary.csv")
-
-# fig, ax = plt.subplots(figsize=(8, 5))
-# ax.bar(summary["metric"], summary["value"])
-# ax.set_title("Replication headline result")
-# ax.set_ylabel("Value")
-# fig.tight_layout()
-# assert_layout(fig)  # no overlapping labels, no legend over data
-#
-# fig.savefig(FIGURES_DIR / "main_result.png", dpi=150, bbox_inches="tight")
-# plt.show()  # required for MyST inline display
+# ## Limits
+# - Sub-regions are IHO seas, not the paper's clusters (the paper's Marmara cluster MS-C5 is close to the IHO Sea of
+#   Marmara).
+# - Our Python detection agrees with the reference Python implementation, not checked against the MATLAB one.
+# - Surface temperature only; mucilage itself is not modelled.

@@ -14,90 +14,34 @@
 # ---
 
 # %% [markdown]
-# # 01 — Data download
+# # 01 — Data
 #
-# This notebook fetches all input data needed by the replication pipeline.
-# Every dataset is downloaded from a citable source (Zenodo, GBIF, Copernicus,
-# etc.) and a record of the source is logged into `data/raw/sources.json`
-# alongside the data files.
+# **DRAFT, not reviewed.** LifeWatch ERIC feasibility test, our reading of the published work (Saçu, Şen, Erdik and
+# Öztürk 2025, *Dynamics of Atmospheres and Oceans* 110:101555,
+# [doi:10.1016/j.dynatmoce.2025.101555](https://doi.org/10.1016/j.dynatmoce.2025.101555)), open to correction by the
+# authors.
 #
-# **Self-contained data:** The repository ships without input data. This
-# notebook is the only path that brings data into `data/raw/`. A user cloning
-# the repo and running this notebook should get a complete reproducible run.
+# The pipeline is in `pipeline/` and `Snakefile` (see *How to reproduce* in the README). It is **not** rerun when this
+# book is built: it needs a Copernicus Marine account and DestinE upgraded access (Climate DT). These pages read the
+# summary results committed in `results/` and the figures in `figures/`.
 #
-# **Credentials:** if your replication uses a credentialled API, document the
-# credential setup at the top of this notebook, including:
+# | Input | Source | Licence | Pipeline step |
+# |---|---|---|---|
+# | OSTIA L4 reprocessed SST, 0.05°, 1982–2025 (the paper's product) | Copernicus Marine SST_GLO_SST_L4_REP_OBSERVATIONS_010_011, [doi:10.48670/moi-00168](https://doi.org/10.48670/moi-00168) | Copernicus Marine licence (free account) | `pipeline/00_download.py`, `pipeline/01_healpix.py` |
+# | IHO Sea Areas (instead of the paper's clusters) | Marine Regions | CC BY 4.0 | `pipeline/01_healpix.py` |
+# | Climate DT generation 2 daily SST (avg_tos), IFS-FESOM and IFS-NEMO, 1990–2049 | DestinE upgraded access | DestinE terms: derived statistics only | `pipeline/03_climatedt.py` |
+# | Marmara physics model at 500 m, from November 2021 | Copernicus Marine BLKSEA_ANALYSISFORECAST_PHY_007_001 | Copernicus Marine licence | `pipeline/05_subsurface.py` |
 #
-# - Where the user gets the credential (URL).
-# - Where it lives on disk (or which env var Claude expects).
-# - The corresponding GitHub Actions secret name(s) for CI.
+# Grid: HEALPix depth 10 (~6.4 km; healpix-geo, WGS84 ellipsoid, NESTED), resampled with healpix-resample
+# (conservative bilinear, land excluded). Sea means are plain means over equal-area cells.
 
 # %%
 import json
 from pathlib import Path
 
-import requests
+import pandas as pd
 
-# %%
-RAW_DIR = Path("../data/raw")
-RAW_DIR.mkdir(parents=True, exist_ok=True)
-
-# %% [markdown]
-# ## Source registry
-#
-# Replace the placeholder source(s) below with your actual data sources. Each
-# entry should record: name, URL or DOI, license, accessed-on date, and SHA-256
-# of the downloaded file (computed and added after first download).
-
-# %%
-SOURCES = [
-    {
-        "name": "<dataset-name>",
-        "doi": "<10.x/y or null>",
-        "url": "<https://...>",
-        "license": "<CC-BY-4.0 / CC-BY-NC-4.0 / public-domain / ...>",
-        "accessed_on": "2026-10-23",
-        "sha256": None,  # filled after first download
-    },
-    # Add more sources here as needed.
-]
-
-
-# %% [markdown]
-# ## Download
-
-# %%
-def download_source(source: dict) -> Path:
-    """Fetch a single source into data/raw/. Replace with your real implementation."""
-    # Example skeleton — adapt to your data source's API:
-    # response = requests.get(source["url"], stream=True, timeout=300)
-    # response.raise_for_status()
-    # out_path = RAW_DIR / Path(source["url"]).name
-    # with open(out_path, "wb") as f:
-    #     for chunk in response.iter_content(chunk_size=8192):
-    #         f.write(chunk)
-    # return out_path
-    raise NotImplementedError(
-        "Implement download for: " + source["name"] + ". "
-        "See data/README.md for common patterns."
-    )
-
-
-# %%
-# Uncomment when SOURCES is populated:
-# for source in SOURCES:
-#     print(f"Fetching {source['name']}...")
-#     path = download_source(source)
-#     print(f"  -> {path}")
-
-# %% [markdown]
-# ## Source log
-#
-# Persist the source registry to disk so that downstream notebooks can audit
-# what data was used and when.
-
-# %%
-with open(RAW_DIR / "sources.json", "w") as f:
-    json.dump({"sources": SOURCES}, f, indent=2)
-
-print(f"Logged {len(SOURCES)} source(s) to {RAW_DIR / 'sources.json'}")
+R = Path("../results")
+cells = json.loads((R / "cells.json").read_text())
+print("HEALPix depth", cells["healpix_depth"])
+pd.DataFrame(cells["seas"]).T

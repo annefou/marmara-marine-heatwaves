@@ -14,55 +14,25 @@
 # ---
 
 # %% [markdown]
-# # 02 — Data clean
+# # 02 — Heatwave detection and its check
 #
-# This notebook tidies the raw data from `data/raw/` into an analysis-ready
-# format in `data/clean/`. Document every transformation: filters, renames,
-# joins, deduplications, projections, etc. The cleaned data is what the
-# analysis notebook consumes.
+# Hobday et al. 2016 detection: 11-day window, 90th percentile, 31-day smoothing, at least 5 days, gaps of up to
+# 2 days joined. The paper used a MATLAB toolbox (Zhao and Marin 2019); ours is checked against the reference Python
+# implementation (Oliver, marineHeatWaves, commit d7292bf) by `pipeline/09_check_reference.py`.
 
 # %%
+import json
 from pathlib import Path
 
 import pandas as pd
 
-# %%
-RAW_DIR = Path("../data/raw")
-CLEAN_DIR = Path("../data/clean")
-CLEAN_DIR.mkdir(parents=True, exist_ok=True)
+R = Path("../results")
+ref = json.loads((R / "reference_check.json").read_text())
+print("reference:", ref["reference"])
+pd.DataFrame({k: v for k, v in ref.items() if isinstance(v, dict)}).T
 
 # %% [markdown]
-# ## Load raw data
+# Annual series for the Sea of Marmara, paper baseline (1982–2021 climatology):
 
 # %%
-# Replace with your actual file(s):
-# raw = pd.read_csv(RAW_DIR / "dataset.csv")
-# Or for NetCDF: ds = xr.open_dataset(RAW_DIR / "dataset.nc")
-raw = None
-
-# %% [markdown]
-# ## Apply cleaning steps
-#
-# Document each step. Common patterns:
-#
-# - Filter by date range, region, or quality flag.
-# - Rename columns to a stable schema.
-# - Coerce dtypes.
-# - Drop or impute missing values, with a recorded count.
-# - Join external lookup tables (e.g. species → genus).
-
-# %%
-# Example skeleton:
-# clean = (
-#     raw
-#     .pipe(lambda df: df[df["year"].between(2000, 2020)])
-#     .rename(columns={"raw_col": "clean_col"})
-#     .dropna(subset=["clean_col"])
-# )
-
-# %% [markdown]
-# ## Persist clean data
-
-# %%
-# Example: clean.to_parquet(CLEAN_DIR / "dataset.parquet")
-# print(f"Wrote {len(clean):,} rows to {CLEAN_DIR / 'dataset.parquet'}")
+pd.read_csv(R / "mhw_annual_marmara_paper.csv").tail(10)
