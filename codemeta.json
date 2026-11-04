@@ -3,7 +3,7 @@
   "@type": "SoftwareSourceCode",
   "name": "marmara-marine-heatwaves",
   "description": "Marine heatwaves in the Sea of Marmara, Black Sea and Aegean 1982–2025: replication of Saçu et al. 2025 on HEALPix (healpix-geo, WGS84), Hobday definition checked against the reference package, with Climate DT projections. DRAFT, not reviewed.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dateCreated": "2026-10-23",
   "dateModified": "2026-11-04",
   "license": "https://spdx.org/licenses/MIT",
