@@ -56,41 +56,103 @@ Copernicus Marine (Copernicus Marine licence; free account), IHO Sea Areas (Mari
 
 ---
 
-## Quick start
+## Install and run
+
+You can read the results without installing anything: the summary tables are in `results/`, the figures in
+`figures/`, and the [Jupyter Book](https://annefou.github.io/marmara-marine-heatwaves/) shows both. Rerunning the analysis needs the
+steps below.
+
+### Install
+
+1. Install pixi (<https://pixi.sh>): `curl -fsSL https://pixi.sh/install.sh | bash`.
+2. Get the code and the pinned environment:
+
+   ```bash
+   git clone https://github.com/annefou/marmara-marine-heatwaves.git
+   cd marmara-marine-heatwaves
+   pixi install
+   ```
+
+   Linux (x86-64), macOS (Apple silicon) and Windows: the pixi lock file covers all three. Pixi installs everything from `pixi.toml` and `pixi.lock` into `.pixi/`; `pixi run <task>` runs a
+   task in that environment without activating it.
+
+### Accounts each step needs
+
+| What you run | Data | Account needed |
+| --- | --- | --- |
+| `pixi run snakemake --cores 1` (claims M1-M3, reference check) | OSTIA L4 reprocessed SST (SST_GLO_SST_L4_REP_OBSERVATIONS_010_011) | **Copernicus Marine** (free) |
+| | IHO Sea Areas (Marine Regions) | none |
+| `pixi run snakemake --cores 1 climatedt` (projection to 2049) | Climate DT generation 2 daily SST, IFS-FESOM and IFS-NEMO | **DestinE upgraded access** (and the OSTIA files above) |
+| `pixi run snakemake --cores 1 subsurface` | Copernicus Marine Marmara model at 500 m (BLKSEA_ANALYSISFORECAST_PHY_007_001), 2022-2025 | **Copernicus Marine** (free) |
+
+Accounts are read from your home directory or the environment, never from the repository, and nothing in `work/`
+(the downloads) is committed. Set up only the ones for the steps you run.
+
+### Copernicus Marine Service
+
+1. Create a free account at <https://data.marine.copernicus.eu/register>.
+2. Run `pixi run copernicusmarine login` once; it asks for the user name and password and stores them in
+   `~/.copernicusmarine/.copernicusmarine-credentials`. The toolbox also reads `COPERNICUSMARINE_SERVICE_USERNAME` and
+   `COPERNICUSMARINE_SERVICE_PASSWORD` from the environment.
+3. Products used: SST_GLO_SST_L4_REP_OBSERVATIONS_010_011 (OSTIA reprocessed, dataset `METOFFICE-GLO-SST-L4-REP-OBS-SST`,
+   1982-2025), SST_GLO_SST_L4_NRT_OBSERVATIONS_010_001 (OSTIA near real time, `METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2`,
+   2021-2025) and BLKSEA_ANALYSISFORECAST_PHY_007_001 (`cmems_mod_blk_phy-tem_anfc_mrm-500m_P1D-m`).
+
+### Destination Earth: Climate DT (DestinE upgraded access)
+
+1. Create an account on the DestinE Platform, <https://platform.destine.eu/>, and request **upgraded access**, which
+   includes the Climate Change Adaptation Digital Twin. Eligibility and terms are set by the platform (at the time of
+   writing: users in EU Member States and in countries associated with the Digital Europe Programme; check the current
+   terms of use before you apply). Upgraded access is not automatic: allow time for the request to be reviewed.
+2. Get the Polytope key (an offline token) with ECMWF's script; it asks for your DestinE user name and password and
+   writes `{"user_key": "<offline token>"}` to `~/.polytopeapirc`:
+
+   ```bash
+   curl -sO https://raw.githubusercontent.com/destination-earth-digital-twins/polytope-examples/main/desp-authentication.py
+   pixi run python desp-authentication.py
+   ```
+
+   `polytope-client` also reads `POLYTOPE_USER_KEY` from the environment. A *DestinE Data Lake* (DEDL) API key is a
+   different credential and is refused by Polytope (HTTP 401).
+3. Authentication is not authorisation: a valid key can still be refused the data if upgraded access has not been
+   granted yet; the first request tells you.
+4. Terms: raw Climate DT data may not be redistributed. The pipeline keeps downloads in `work/` (not in git) and
+   commits only derived statistics; keep it that way in any fork.
+
+### Run
 
 ```bash
-git clone https://github.com/annefou/marmara-marine-heatwaves.git
-cd marmara-marine-heatwaves
-pixi install
-pixi run download            # needs a free Copernicus Marine account (copernicusmarine login)
-pixi run healpix
-pixi run mhw
-pixi run reference-check
-```
-
-(Pixi resolves `pixi.toml` against the per-platform `pixi.lock`, installs the env under `.pixi/`, and provides `pixi run` for any task without needing an `activate` step.)
-
-Or with Docker:
-
-```bash
-docker run --rm ghcr.io/annefou/marmara-marine-heatwaves:latest
-```
-
-The Jupyter Book version is at <https://annefou.github.io/marmara-marine-heatwaves/>.
-
-## How to reproduce
-
-```
-pixi install
 pixi run snakemake --cores 1              # OSTIA heatwaves and the reference check: Copernicus Marine account
 pixi run snakemake --cores 1 climatedt    # Climate DT projection to 2049: DestinE upgraded access
-pixi run snakemake --cores 1 subsurface   # Copernicus Marine Marmara model at 500 m, 2022-2025
+pixi run snakemake --cores 1 subsurface   # Marmara model at 500 m, 2022-2025: Copernicus Marine account
 ```
 
+Single steps: `pixi run download`, `pixi run healpix`, `pixi run mhw`, `pixi run reference-check`.
+
 Every step is a script in `pipeline/` with its usage in its docstring; `Snakefile` gives the order, inputs and
-outputs. Accounts are read by the Copernicus Marine toolbox and from `~/.polytopeapirc` and never stored here.
-Downloads stay in `work/`; only code, plots and summary results are committed. The country-file charts are in
-`docs/country_file/`.
+outputs. `pixi run snakemake --cores 1 --dry-run` lists what would run without downloading anything.
+The charts of the LifeWatch country file are in `docs/country_file/` (chart code and the rows they plot).
+
+### With Docker
+
+The image holds the environment and the code, never an account. Put the accounts the steps need in a file that
+stays on your machine (for example `~/credentials.env`, outside the repository) and pass it at run time, from the
+cloned repository (so that `work/` and `results/` are kept on your disk):
+
+```
+CDSAPI_URL=https://cds.climate.copernicus.eu/api
+CDSAPI_KEY=<CDS personal access token>
+COPERNICUSMARINE_SERVICE_USERNAME=<Copernicus Marine user name>
+COPERNICUSMARINE_SERVICE_PASSWORD=<Copernicus Marine password>
+POLYTOPE_USER_KEY=<DestinE offline token>
+```
+
+```bash
+docker run --rm --env-file ~/credentials.env -v "$PWD/work:/app/work" -v "$PWD/results:/app/results" \
+    ghcr.io/annefou/marmara-marine-heatwaves:latest pixi run snakemake --cores 1 climatedt
+```
+
+Leave out the lines a step does not need. The image is published on GitHub's container registry with each release.
 
 ## Built from a template
 
