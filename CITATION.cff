@@ -29,6 +29,12 @@ identifiers:
   value: 10.5281/zenodo.23942471
   description: Concept DOI (resolves to the latest version) — cite the project
 - type: doi
+  value: 10.5281/zenodo.23945004
+  description: Version DOI for v0.1.1 — pins this exact release; cite this from nanopubs
+- type: swh
+  value: swh:1:rev:8f4aaadcea045e5c6e8ac91da4878ada1a100e7d;origin=https://github.com/annefou/marmara-marine-heatwaves
+  description: Software Heritage ID of the v0.1.1 source tree
+- type: doi
   value: 10.5281/zenodo.23942472
   description: Version DOI for v0.1.0 — pins this exact release; cite this from nanopubs
 - type: swh

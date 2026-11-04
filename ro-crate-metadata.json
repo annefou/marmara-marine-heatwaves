@@ -89,10 +89,10 @@
         }
       ],
       "identifier": [
-        "https://doi.org/10.5281/zenodo.23942472",
-        "swh:1:rev:3b87503cb550131e03d9515377d0059af25e0a42;origin=https://github.com/annefou/marmara-marine-heatwaves"
+        "https://doi.org/10.5281/zenodo.23945004",
+        "swh:1:rev:8f4aaadcea045e5c6e8ac91da4878ada1a100e7d;origin=https://github.com/annefou/marmara-marine-heatwaves"
       ],
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "@id": "https://orcid.org/0000-0002-1784-2920",
