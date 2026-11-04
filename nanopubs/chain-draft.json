@@ -4,7 +4,7 @@
   "chain_shape": "paper-rooted",
   "source": {
     "repository": "https://github.com/annefou/marmara-marine-heatwaves",
-    "commit": "cecc556fc68fd3c0e9734d243e0c5001d020aaa8",
+    "commit": "583b3f3226a56f65389431167fe21cbf795ecff3",
     "figure": "figures/doc_marmara_days.png"
   },
   "steps": [
