@@ -1,11 +1,11 @@
-"""Unit tests for the marine heatwave extensions in pipeline/climate/mhw.py (synthetic series, no network)."""
+"""Unit tests for the marine heatwave extensions in pipeline/mhw.py (synthetic series, no network)."""
 import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "pipeline" / "climate"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "pipeline"))
 import mhw  # noqa: E402
 
 
